@@ -27,7 +27,7 @@ vertices = spark.createDataFrame([('23', 'Michael', 'Jordan', 99),
                                   ('1', 'Derrick', 'Rose', 94),
                                   ('53', 'Artis', 'Gilmore', 94),
                                   ('91', 'Dennis', 'Rodman', 93)],
-                                  ['id', 'name', 'firstname', 'rating'])
+                                  ['id', 'firstname', 'lastname', 'rating'])
 
 
 # Some random associations between the players that form a connected graph.
