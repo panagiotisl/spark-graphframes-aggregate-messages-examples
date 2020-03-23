@@ -4,7 +4,7 @@ Simple example using aggregateMessages.
 The goal is to find the minimum rating of a player (node) by sending the neighbors
 the currently known minimum rating by each node.
 
-Run with: ~/spark-2.4.4-bin-hadoop2.7/bin/spark-submit --packages graphframes:graphframes:0.7.0-spark2.3-s_2.11  /vagrant/example.py
+Run with: ~/spark-2.3.4-bin-hadoop2.7/bin/spark-submit --packages graphframes:graphframes:0.7.0-spark2.3-s_2.11  /vagrant/example.py
 
 """
 
