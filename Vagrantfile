@@ -64,12 +64,13 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-  wget http://apache.otenet.gr/dist/spark/spark-2.3.4/spark-2.3.4-bin-hadoop2.7.tgz
-  tar -zxvf spark-2.3.4-bin-hadoop2.7.tgz
-  rm spark-2.3.4-bin-hadoop2.7.tgz
+  #wget http://apache.otenet.gr/dist/spark/spark-2.3.4/spark-2.3.4-bin-hadoop2.7.tgz
+  wget https://ftp.cc.uoc.gr/mirrors/apache/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz
+  tar -zxvf spark-2.4.7-bin-hadoop2.7.tgz
+  rm spark-2.4.7-bin-hadoop2.7.tgz
   apt-get update
   apt-get -y install openjdk-8-jdk python-numpy
-  sed -i 's/log4j.rootCategory=INFO, console/log4j.rootCategory=ERROR, console/g' ./spark-2.3.4-bin-hadoop2.7/conf/log4j.properties.template 
-  mv ./spark-2.3.4-bin-hadoop2.7/conf/log4j.properties.template ./spark-2.3.4-bin-hadoop2.7/conf/log4j.properties
+  sed -i 's/log4j.rootCategory=INFO, console/log4j.rootCategory=ERROR, console/g' ./spark-3.1.1-bin-hadoop2.7/conf/log4j.properties.template 
+  mv ./spark-2.4.7-bin-hadoop2.7/conf/log4j.properties.template ./spark-2.4.7-bin-hadoop2.7/conf/log4j.properties
   SHELL
 end
