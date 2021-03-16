@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
   rm spark-2.4.7-bin-hadoop2.7.tgz
   apt-get update
   apt-get -y install openjdk-8-jdk python-numpy
-  sed -i 's/log4j.rootCategory=INFO, console/log4j.rootCategory=ERROR, console/g' ./spark-3.1.1-bin-hadoop2.7/conf/log4j.properties.template 
+  sed -i 's/log4j.rootCategory=INFO, console/log4j.rootCategory=ERROR, console/g' ./spark-2.4.7-bin-hadoop2.7/conf/log4j.properties.template 
   mv ./spark-2.4.7-bin-hadoop2.7/conf/log4j.properties.template ./spark-2.4.7-bin-hadoop2.7/conf/log4j.properties
   SHELL
 end
